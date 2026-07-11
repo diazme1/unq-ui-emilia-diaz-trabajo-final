@@ -1,3 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --ink: #1e1e1e;
+}
+
+body {
+  background-color: #fffdf9;
+  background-image: radial-gradient(#e9e5dc 1px, transparent 1px);
+  background-size: 20px 20px;
+  font-family: 'Kalam', cursive;
+  color: var(--ink);
+}
+
+html {
+  font-size: 150%;
+}
+
+.sketchy-border {
+  border: 2.5px solid var(--ink);
+  border-radius: 14px 18px 12px 20px / 18px 12px 20px 14px;
+}
+
+.hatch-green { background-image: repeating-linear-gradient(135deg, rgba(47, 158, 68, 0.18) 0 5px, transparent 5px 10px); }
+.hatch-gray  { background-image: repeating-linear-gradient(135deg, rgba(173, 181, 184, 0.3) 0 5px, transparent 5px 10px); }
+.hatch-red   { background-image: repeating-linear-gradient(135deg, rgba(224, 49, 49, 0.18) 0 5px, transparent 5px 10px); }

@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { useGame } from '../../hooks/useGame.js'
 import WordInput from './WordInput.jsx'
 import WordChain from './WordChain.jsx'
@@ -6,33 +7,18 @@ import GameOver from './GameOver.jsx'
 
 function Game() {
   const {
-    status,        
-    wordChain,         
-    score,         
-    segundosRestantes,   
-    error,     
-    isValidating,    
-    submitWord,    
-    startGame,     
-    restartGame,   
+    status, wordChain, score, segundosRestantes,   
+    error, isValidating, submitWord, startGame, restartGame,   
   } = useGame()
 
-  if (status === 'idle') {
-    return (
-      <div className="game">
-        <button onClick={startGame}>Jugar</button>
-      </div>
-    )
-  }
+  useEffect(() => {
+    if (status === 'idle') startGame()
+  }, [status, startGame])
+
+  if (status === 'idle') return null
 
   if (status === 'gameOver') {
-    return (
-      <GameOver
-        wordChain={wordChain}
-        score={score}
-        onRestart={restartGame}
-      />
-    )
+    return <GameOver wordChain={wordChain} score={score} onRestart={restartGame} />
   }
 
   return (
