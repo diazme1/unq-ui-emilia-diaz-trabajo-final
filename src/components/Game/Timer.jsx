@@ -9,7 +9,7 @@ function Timer({ segundosRestantes }) {
       <p className="text-center font-bold text-lg mb-2">
         Tiempo restante: {segundosRestantes} segundos
       </p>
-      <div className="sketchy-border h-8 bg-paper overflow-hidden">
+      <div className="sketchy-border h-4 bg-paper overflow-hidden">
         <div
           className="h-full bg-sketch-green transition-[width] duration-1000 ease-linear"
           style={{ width: `${percent}%` }}
