@@ -5,6 +5,7 @@ import WordInput from './WordInput.jsx'
 import WordChain from './WordChain.jsx'
 import Timer from './Timer.jsx'
 import GameOver from './GameOver.jsx'
+import Summary from './Summary.jsx'
 
 function Game() {
 
@@ -50,6 +51,8 @@ function Game() {
       </div>
       
       <WordInput onSubmit={submitWord} error={error} disabled={isValidating} />
+
+      <Summary wordChain={wordChain} score={score} />
     </div>
   )
 }

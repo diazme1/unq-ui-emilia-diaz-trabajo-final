@@ -28,9 +28,6 @@ function WordChain({ wordChain=[], score=0 }) {
         ))}
         <div ref={bottomRef} />
       </div>
-
-      <p className="font-bold text-lg mt-2">Cant. de palabras encadenadas: {wordChain.length} pts.</p>
-      <p className="font-bold text-lg mt-2">Puntaje total: {score} pts.</p>
     </div>
   )
 }
