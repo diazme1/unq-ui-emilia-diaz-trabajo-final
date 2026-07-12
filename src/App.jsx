@@ -1,6 +1,7 @@
 import {Routes, Route} from 'react-router-dom'
 import Home from './pages/Home.jsx'
 import Rules from './pages/Rules.jsx'
+import Leaderboard from './pages/Leaderboard.jsx'
 import Game from './components/Game/Game.jsx'
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/reglas" element={<Rules />} />
         <Route path="/jugar" element={<Game />} />
+        <Route path="/leaderboard" element={<Leaderboard />} />
       </Routes>
     </div>
   )

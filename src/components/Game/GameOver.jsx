@@ -1,6 +1,17 @@
 import { Link } from 'react-router-dom'
+import { useState } from 'react'
+import { saveScore } from '../../utils/leaderboard.js'
 
 function GameOver({ wordChain = [], score = 0, onRestart }) {
+
+  const [saved, setSaved] = useState(false)
+
+  const handleSave = (event) => {
+    event.preventDefault()
+    saveScore({ name, score, wordsCount: wordChain.length })
+    setSaved(true)
+  }
+
   return (
     <div className="sketchy-border bg-paper w-full max-w-xl p-8 flex flex-col items-center gap-6 text-center">
       <span className="text-sm font-bold text-sketch-gray self-start">Palabras encadenadas</span>
@@ -22,6 +33,27 @@ function GameOver({ wordChain = [], score = 0, onRestart }) {
           Puntaje final: <strong>{score}</strong>
         </p>
       </div>
+
+      {!saved ? (
+        <form onSubmit={handleSave} className="w-full flex flex-col gap-2">
+          <input
+            type="text"
+            value={name}
+            placeholder="Tu nombre para el leaderboard..."
+            maxLength={20}
+            className="sketchy-border px-4 py-2 text-center outline-none"
+            required
+          />
+          <button
+            type="submit"
+            className="sketchy-border bg-sketch-greenBg font-bold py-2 hover:-translate-y-0.5 transition-transform"
+          >
+            🏆 Guardar puntaje
+          </button>
+        </form>
+      ) : (
+        <p className="font-bold text-sketch-green">✅ ¡Puntaje guardado!</p>
+      )}
 
       <div className="flex flex-col gap-3 w-full">
         <button 
