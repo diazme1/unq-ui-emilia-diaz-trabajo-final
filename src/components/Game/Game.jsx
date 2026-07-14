@@ -33,8 +33,8 @@ function Game() {
   }
 
   return (
-    <div className="sketchy-border bg-paper w-full max-w-xl p-8 flex flex-col gap-4">
-      <div className="flex justify-between items-center">
+    <div className="sketchy-border bg-paper w-full max-w-xl p-4 sm:p-8 flex flex-col gap-4">
+      <div className="flex flex-wrap justify-between items-center gap-2">
         <span className="text-sm font-bold text-sketch-gray">Palabras encadenadas</span>
         <button
             onClick={handleCancel}

@@ -16,7 +16,7 @@ function WordChain({ wordChain=[], score=0 }) {
           <div key={`${word}-${index}`} className="flex flex-col items-center gap-2 w-full shrink-0">
             <div className="grid grid-cols-[1fr_auto_1fr] items-center gap-3 w-full">
               <span />
-              <span className="sketchy-border hatch-green px-3 py-1 font-bold text-base text-center">
+              <span className="sketchy-border hatch-green px-3 py-1 font-bold text-base text-center break-words">
                 {word}
               </span>
               <span className="text-sketch-green font-bold text-sm whitespace-nowrap text-left">

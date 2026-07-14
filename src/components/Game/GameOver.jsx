@@ -4,6 +4,7 @@ import { saveScore } from '../../utils/leaderboard.js'
 
 function GameOver({ wordChain = [], score = 0, onRestart }) {
 
+  const [name, setName] = useState('')
   const [saved, setSaved] = useState(false)
 
   const handleSave = (event) => {
@@ -39,6 +40,7 @@ function GameOver({ wordChain = [], score = 0, onRestart }) {
           <input
             type="text"
             value={name}
+            onChange={(event) => setName(event.target.value)}
             placeholder="Tu nombre para el leaderboard..."
             maxLength={20}
             className="sketchy-border px-4 py-2 text-center outline-none"

@@ -20,7 +20,7 @@ function WordInput({ onSubmit, error, disabled }) {
           placeholder="Escribí una palabra..."
           disabled={disabled}
           autoFocus
-          className="sketchy-border flex-1 px-3 py-1 text-lg outline-none disabled:bg-sketch-grayBg"
+          className="sketchy-border flex-1 min-w-0 px-3 py-1 text-lg outline-none disabled:bg-sketch-grayBg"
         />
         <button type="submit" disabled={disabled} className="sketchy-border bg-sketch-blueBg px-3 py-1 font-bold text-lg disabled:opacity-50">
           Enviar
