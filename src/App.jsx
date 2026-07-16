@@ -1,8 +1,8 @@
 import {Routes, Route} from 'react-router-dom'
-import Home from './pages/Home.jsx'
+import Home from './pages/home/Home.jsx'
 import Rules from './pages/Rules.jsx'
 import Leaderboard from './pages/Leaderboard.jsx'
-import Game from './components/Game/Game.jsx'
+import Game from './pages/Game.jsx'
 
 function App() {
   return (

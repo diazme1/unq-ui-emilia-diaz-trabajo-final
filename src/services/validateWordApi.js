@@ -26,5 +26,5 @@ export async function validateWord(word) {
   }
 
   const data = await response.json()
-  return data.exists === true
+  return data.exists
 }
